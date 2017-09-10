@@ -1,0 +1,42 @@
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <h4 class="text-uppercase">Customer Service</h4>
+        <p>Hotline: {{ site.hotline }}</p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h4 class="text-uppercase">About us</h4>
+        <div>
+          {% for about_us_item in site.about_us %}
+          <a href="{{ about_us_item[1] }}">{{ about_us_item[0] }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h4 class="text-uppercase">Follow us</h4>
+        <div>
+          {% if site.social.facebook %}
+          <a href="//facebook.com/{{ site.social.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if site.social.youtube %}
+          <a href="{{ site.social.youtube }}"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if site.social.zalo %}
+          <a href="{{ size.social.zalo }}">Zalo</a>
+          {% endif%}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> {% if site.address %}{{ site. address }}{% endif %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        {% include disclaimer.html %}
+      </div>
+    </div>
+  </div>
+</footer>

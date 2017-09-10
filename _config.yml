@@ -1,0 +1,25 @@
+title: Your awesome title
+email: your-email@example.com
+hotline: +012-34-56-789
+address: 123 ABC Street, TMB City, NV, 00000
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/blog-theme" # the subpath of your site, e.g. /blog
+url: "http://suakhoabmt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+menu:
+  Home: /
+  Products: /products/
+  Services: /services/
+  About: /about/
+  Contact: /contact/
+
+social:
+  facebook: suakhoabmt
