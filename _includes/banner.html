@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-sm-8">
+      <h1 class="banner-logo">
+        <a href="{{ "/" | relative_url }}">
+          {% if site.banner.logo.image %}
+          <img src="{{ site.banner.logo.image }}" alt="{{ site.title | escape }}">
+          {% elsif site.banner.logo.text %}
+          {{ site.banner.logo.text }}
+          {% else %}
+          {{ site.title | escape }}
+          {% endif%}
+        </a>
+      </h1>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div class="banner-phone">
+        <a class="pull-right" href="tel:{{ site.banner.phone }}">
+          <span>
+            <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
+          </span>
+          <span>
+            Call now <br>
+            {{ site.banner.phone }}
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
