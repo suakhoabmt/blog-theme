@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="row">
   <div class="col-md-12 col-sm-12">
+    {% include carousel.html target = "custom-carousels" collections = site.carousels %}
     <h1 class="page-heading">Posts</h1>
     {{ content }}
     <ul class="post-list">

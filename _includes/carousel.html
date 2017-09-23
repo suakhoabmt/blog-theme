@@ -1,0 +1,43 @@
+<div id="{{ include.target }}" class="carousel slide" data-ride="carousel">
+  {% assign items = include.collections %}
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {% for item in items %}
+    {% if forloop.first == true %}
+    <li data-target="#{{ include.target }}" data-slide-to="{{ forloop.index }}" class="active"></li>
+    {% else %}
+    <li data-target="#{{ include.target }}" data-slide-to="{{ forloop.index }}"></li>
+    {% endif %}
+    {% endfor %}
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    {% for item in items %}
+    {% if forloop.first == true %}
+    <div class="item active">
+      <img src="{{ item.img }}" alt="{{ item.title | escape }}">
+      <div class="carousel-caption">
+        <h3>{{ item.title }}</h3>
+      </div>
+    </div>
+    {% else %}
+    <div class="item">
+      <img src="{{ item.img }}" alt="{{ item.title | escape }}">
+      <div class="carousel-caption">
+        <h3>{{ item.title }}</h3>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#{{ include.target }}" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  <a class="right carousel-control" href="#{{ include.target }}" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<!-- Carousel -->
